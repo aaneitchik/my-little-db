@@ -1,0 +1,91 @@
+@import '../assets/_variables.scss';
+
+@font-face {
+	font-family: Novecento-Normal;
+	src: url('../assets/fonts/novecentosanswide_normal_macroman/Novecentosanswide-Normal-webfont.ttf');
+}
+
+@font-face {
+	font-family: Novecento-Book;
+	src: url('../assets/fonts/novecentosanswide_book_macroman/Novecentosanswide-Book-webfont.ttf');
+}
+
+body {
+	margin: 0;
+	font-family: Novecento-Book, sans serif;
+}
+
+.app-container {
+	position: relative;
+	width: calc(100% - 70px);
+	margin-left: auto;
+	margin-right: auto;
+	color: $text-color;
+
+	.app-header {
+		height: 35px;
+		padding-top: 10px;
+		text-align: center;
+		transition: all 0.4s ease;
+
+		&.popup-open {
+			-webkit-filter: blur(2px) grayscale(50%);
+		}
+
+		.table-name {
+			margin-right: 25px;
+			cursor: pointer;
+			color: $dark-green-color;
+			font-weight: bold;
+			font-size: 14px;
+			letter-spacing: 2px;
+
+			&:hover {
+				color: $light-green-color;
+			}
+		}
+	}
+
+	.app-main {
+		padding: 15px;
+		min-height: 650px;
+		background-color: $bg-color;
+		transition: all 0.4s ease;
+
+		&.popup-open {
+			-webkit-filter: blur(2px) grayscale(50%);
+		}
+	}
+}
+
+.header {
+	font-weight: bold;
+	letter-spacing: 5px;
+	text-transform: uppercase;
+}
+
+.redux-toastr {
+
+	.toastr {
+
+		&.success {
+			background-color: white;
+			color: #60bb71;
+		}
+
+		&.error {
+			background-color: white;
+			color: #db6a64;
+		}
+
+		.close-toastr {
+			height: auto;
+			font-size: 16px;
+		}
+
+		.message-holder {
+			width: 100%;
+			font-family: Novecento-Book, sans serif;
+		}
+	}
+}

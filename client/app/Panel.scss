@@ -1,0 +1,53 @@
+@import '../assets/_variables.scss';
+
+.panel {
+	display: inline-block;
+	width: 200px;
+	height: 100%;
+	margin: 10px;
+	padding: 5px 15px;
+	text-align: center;
+	background-color: white;
+
+	.block {
+		position: relative;
+		padding: 20px 0;
+		cursor: pointer;
+
+		&:not(:last-child):after {
+			content: '';
+			position: absolute;
+			left: 15%;
+			bottom: 0;
+			height: 1px;
+			width: 70%;
+			border-bottom: 1px solid $bg-color;
+		}
+
+		&:first-of-type {
+			padding-top: 10px;
+		}
+
+		.subheader {
+			margin-bottom: 5px;
+			font-weight: bold;
+			font-size: 13px;
+			color: $brown-text;
+			letter-spacing: 3px;
+			text-transform: uppercase;
+		}
+
+		.toggle-container {
+			margin-top: 10px;
+
+			& > div {
+				margin: 0 auto;
+			}
+		}
+
+		.description {
+			margin-top: 5px;
+			font-size: 14px;
+		}
+	}
+}
